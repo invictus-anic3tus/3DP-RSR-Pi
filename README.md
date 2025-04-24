@@ -32,7 +32,7 @@ AC Relay 2 -> PSU positive input
 
 (Optional) Raspberry Pi GPIO Pin (Button pin) -> Pushbutton In, Pushbutton out -> Raspberry Pi GND
 
-here's how this works: first, whenever you turn on the GPIO, the DC relay gets a 3.3V signal and passes the Pi's 5V line across to the AC relay. This is necessary because the GPIO pins themselves don't have enough power to run a 40A relay, and the 5V from the pi comes straight from the power source and triggers the AC relay. For this reason, you're going to need a relatively powerful power source for the pi, to provide the extra power for the relay. 3A is probably fine as long as you don't have very many other things connected to it, like touchscreens and cameras. My setup uses a 5" touchscreen, a pi cam, and a usb cam, so I'm going to go 3.6A. The cool thing about this is setup that whenever you shut down the pi, all of the GPIOs are set to LOW. This means that to turn off the printer and the pi in one go, just run your pi shutdown command. Easy!
+here's how this works: first, whenever you turn on the GPIO, the DC relay gets a 3.3V signal and passes the Pi's 5V line across to the AC relay. This is necessary because the GPIO pins themselves don't have enough power to run a 40A relay, and the 5V from the pi comes straight from the power source and triggers the AC relay. For this reason, you're going to need a relatively powerful power source for the pi, to provide the extra power for the relay. A standard 2.5A power supply is probably fine as long as you don't have 17 touchscreens and 5 cameras. Find out the amperages of the devices you're using, add them up, add about 450mA for the pi itself, and then subtract that from your power source. As long as you have over 200mA, you'll probably be fine. The cool thing about this is setup that whenever you shut down the pi, all of the GPIOs are set to LOW. This means that to turn off the printer and the pi in one go, just run your pi shutdown command. Easy!
 
 # Code
 
@@ -74,3 +74,5 @@ Which should add a button to run the command via the interface. Haven't tested y
 ## That should be it!!!!
 
 Feel free to open an issue or PR if you have any questions or things to add!
+
+![pic](https://github.com/invictus-anic3tus/3DP-RSR-Pi/blob/main/images/pic.png)
