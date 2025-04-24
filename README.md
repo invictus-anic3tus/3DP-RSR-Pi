@@ -25,14 +25,27 @@ DC Relay NC -> AC Relay Control+
 
 # Code
 
-relaycontrol_on.py
+Make this script in /home/pi
+
+relaycontrol.py
 ```
 import RPi.GPIO as GPIO
 
 relay_pin = (insert your output pin here)
-
-GPIO.setmode(relay_pin, GPIO.BCM)
-GPIO.setup(relay_pin, GPIO.OUT)
-
-GPIO.output(relay_pin, GPIO.HIGH)
+try:
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(relay_pin, GPIO.OUT)
+    GPIO.output(relay_pin, GPIO.HIGH)
+    # Keep the pin high indefinitely
+    while True:
+        pass
+except KeyboardInterrupt:
+    print("\nKeyboard interruption")
+    GPIO.cleanup()
+except:
+    print("Exiting Program...")
+    GPIO.cleanup()
+finally:
+    # Ensure GPIO pins are cleaned up
+    GPIO.cleanup()
 ```
