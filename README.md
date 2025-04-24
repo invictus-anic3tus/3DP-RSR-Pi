@@ -16,7 +16,7 @@ That should be all you need! The last part2 can be very hard to source, dependin
 ## Warning
 Never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never never EVER TOUCH MAINS POWER!!!!!!!!! ALWAYS attach anything that has to do with AC voltage to a terminal, and once everything is done and protected THEN you can plug it into an outlet. I don't want to be the death of anybody!
 
-![wiring](https://github.com/invictus-anic3tus/3DP-RSR-Pi/images/relaywiring.png)
+![wiring](https://github.com/invictus-anic3tus/3DP-RSR-Pi/blob/main/images/relaywiring.png)
 
 Raspberry Pi GND -> DC Relay D- -> AC Relay Control-
 
